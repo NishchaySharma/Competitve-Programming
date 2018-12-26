@@ -3,7 +3,6 @@ def calculate(n:int)->int:
     len=0
     global hold
     if n not in hold:
-        
         if n%2==0:
             hold[n]=1+calculate(n//2)
         else:
