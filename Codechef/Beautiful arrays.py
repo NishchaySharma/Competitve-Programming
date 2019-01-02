@@ -1,17 +1,8 @@
-t=int(input())
-for _ in range(t):
-    n=int(input())
-    a=list(map(int,input().split()))
-    unique=list(set(a))
-    d={i:0 for i in unique}
-    size=len(unique)
-    flag=True
-    for i in range(size-1):
-        for j in range(i+1,size):
-            if unique[i]*unique[j] not in d:
-                flag=False
-                break
-    if flag:
-        print('yes')
-    else:
-        print('no')
+for _ in range(int(input())):
+    n,one,oneminus,other=int(input()),0,0,0
+    for i in list(map(int,input().split())):
+        if i==1: one+=1
+        elif i==-1: oneminus+=1
+        elif i!=0: other+=1
+    if other>1 or (oneminus>1 and one==0) or (other!=0 and oneminus!=0): print('no')
+    else: print('yes')
