@@ -1,0 +1,5 @@
+for _ in range(int(input())):
+    a,b,k=map(int,input().split())
+    s=str(a**b)
+    l=len(s)
+    print(s[l-k])
