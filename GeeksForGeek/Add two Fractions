@@ -1,0 +1,10 @@
+def addFraction(num1, den1, num2, den2):
+    tmp1,tmp2=den1,den2
+    while tmp1!=0 and tmp2!=0:
+        tmp1,tmp2=tmp2%tmp1,tmp1
+    denx=(den1*den2)//(tmp1+tmp2)
+    numx=num1*denx//den1 + num2*denx//den2
+    tmp1,tmp2=numx,denx
+    while tmp1!=0 and tmp2!=0:
+        tmp1,tmp2=tmp2%tmp1,tmp1
+    print(numx//(tmp1+tmp2),'/',denx//(tmp1+tmp2),sep='')
