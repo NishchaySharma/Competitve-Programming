@@ -16,8 +16,7 @@ int main(){
     unordered_map<int, int> checked;
     vector<int> v;
     for(i=12; i<=28123; i++)
-        if(checkAbundant(i)) v.push_back(i);  
-    cout<<sum<<" "; 
+        if(checkAbundant(i)) v.push_back(i);   
     for(auto i = v.begin(); i!=v.end()-1; i++)
         for(auto j = i; j!=v.end(); j++)
             if(checked.find(*j+*i)==checked.end() && *j+*i<=28123){
